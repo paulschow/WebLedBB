@@ -1,0 +1,27 @@
+$def with (form)
+
+
+<style>
+h1 {font-size:150%;font-family:monospace}
+h2 {font-size:200%;font-family:monospace}
+p {font-size:100%;font-family:monospace}
+s1 {font-size:70%;font-family:monospace}
+</style>
+
+<head>
+<title>Ambient Color Control</title>
+</head>
+
+<center>
+<h2>Ambient Color Control
+
+<form name="main" method="post"> 
+$if not form.valid: <p class="error">Try again:</p>
+$:form.render()
+<input type="submit" />    </form>
+<p>Full on @ 255
+<br>
+<p>Full off @ 0
+<br>
+<br>
+<br>
